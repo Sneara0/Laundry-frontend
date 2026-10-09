@@ -10,19 +10,21 @@ export default function SmoothScrollProvider({
 }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.8,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       touchMultiplier: 2,
+      smoothWheel: true,
     });
 
+    let frame: number;
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      frame = requestAnimationFrame(raf);
     }
-
-    requestAnimationFrame(raf);
+    frame = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(frame);
       lenis.destroy();
     };
   }, []);
