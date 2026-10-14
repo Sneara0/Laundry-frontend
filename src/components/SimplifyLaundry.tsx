@@ -5,7 +5,6 @@ import Image from "next/image";
 import {
   Shirt,
   WashingMachine,
-  MessageCircle,
   ShoppingBag,
   Layers,
   FileText,
@@ -89,20 +88,7 @@ export default function SimplifyLaundry() {
             </div>
 
             {/* Feature Card 2: Eco-Friendly Care */}
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/60 hover:-translate-y-1 transition-all duration-300 relative">
-              <div className="absolute top-4 right-4 flex items-center gap-1.5">
-                <span className="px-2 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-bold text-[10px] shadow-sm">
-                  Chat with us!
-                </span>
-                <a
-                  href="#chat"
-                  aria-label="Chat with support"
-                  className="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-md hover:bg-emerald-600 transition-colors"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                </a>
-              </div>
-
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-white/60 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-9 h-9 rounded-xl bg-[#375a79] text-[#a8d14a] flex items-center justify-center shadow-md shadow-[#375a79]/30 shrink-0">
                   <WashingMachine className="w-5 h-5 stroke-[2]" />
@@ -118,7 +104,7 @@ export default function SimplifyLaundry() {
                 </div>
               </div>
 
-              <p className="text-xs text-slate-600 leading-relaxed pr-14">
+              <p className="text-xs text-slate-600 leading-relaxed">
                 Hypoallergenic organic detergents gentle on your clothes &amp; skin.
               </p>
             </div>

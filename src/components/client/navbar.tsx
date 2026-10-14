@@ -41,7 +41,7 @@ const aboutLinks = [
 
 const navLinks = [
   { name: "Pricing", href: "/pricing" },
-  { name: "How It Works", href: "/how-it-works" },
+  { name: "How It Works", href: "/#how-it-works" },
   { name: "Service Areas", href: "/service-areas" },
   { name: "Track Order", href: "/track-order" },
   { name: "Contact", href: "/contact" },

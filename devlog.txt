@@ -1,0 +1,23 @@
+
+> laundry-frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.187:3000
+✓ Ready in 22.9s
+✓ Running next.config.ts took 323ms
+⚠ Slow filesystem detected. The benchmark took 579ms. If \\?\H:\laundry-frontend\.next\dev is a network drive, consider moving it to a local folder.
+See more: https://nextjs.org/docs/app/guides/local-development
+
+○ Compiling / ...
+ GET / 200 in 16.9s (next.js: 15.9s, application-code: 969ms)
+ GET / 200 in 15.8s (next.js: 14.8s, application-code: 1047ms)
+ GET / 200 in 205ms (next.js: 8ms, application-code: 197ms)
+✓ Finished filesystem cache database compaction in 45s
+✓ Finished writing to filesystem cache in 31.8s
+✓ Finished writing to filesystem cache in 15.3s
+✓ Compiled in 438.1s
+ GET / 200 in 3.8s (next.js: 2.6s, application-code: 1140ms)
+ GET / 200 in 950ms (next.js: 602ms, application-code: 348ms)
+ GET / 200 in 248ms (next.js: 39ms, application-code: 210ms)

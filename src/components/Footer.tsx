@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import {
-  MessageCircle,
   ChevronUp,
   Globe,
 } from "lucide-react";
@@ -117,21 +116,8 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Copyright & Chat Pill & Scroll to top */}
+          {/* Copyright & Scroll to top */}
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 text-xs">
-            {/* Floating Chat Pill */}
-            <div className="flex items-center gap-2">
-              <div className="bg-white text-slate-950 font-bold px-4 py-2 rounded-full shadow-md text-xs">
-                Chat with us!
-              </div>
-              <button
-                aria-label="Open Chat"
-                className="w-10 h-10 rounded-full bg-[#22c55e] text-white flex items-center justify-center shadow-lg hover:bg-[#1ea34d] hover:scale-105 transition-all"
-              >
-                <MessageCircle className="w-5 h-5 fill-current" />
-              </button>
-            </div>
-
             {/* Copyright Notice */}
             <span className="text-slate-400 text-xs font-light">
               &copy; Pressio. 2026. All Rights Reserved.

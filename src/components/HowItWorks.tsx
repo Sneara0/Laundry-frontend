@@ -275,170 +275,271 @@ export default function HowItWorks() {
             </div>
 
             {/* Right: Interactive Graphic Visual Mockup */}
-            <div className="lg:col-span-6 flex justify-center">
-              <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl relative text-white">
-                {/* Visual Header */}
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-rose-500/80" />
-                    <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                    <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                  </div>
-                  <span className="text-xs font-mono text-slate-400 flex items-center gap-1">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#a8d14a]" />
-                    Pressio Live Workflow
-                  </span>
-                </div>
+            <div className="lg:col-span-6 flex justify-center w-full">
+              <div className="relative w-full max-w-lg group">
+                {/* Dynamic Ambient Glow Behind Card */}
+                <div className="absolute -inset-1.5 bg-gradient-to-r from-[#375a79]/40 via-sky-500/20 to-[#a8d14a]/30 rounded-[32px] blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 pointer-events-none" />
 
-                {/* Dynamic Content Mockup Based on Active Step */}
-                {activeStep.mockType === "booking" && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="flex items-center justify-between bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-[#375a79] text-[#a8d14a] rounded-lg">
-                          <CalendarCheck className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <p className="text-xs text-slate-400">Pickup Date</p>
-                          <p className="text-sm font-bold text-white">Today, 5:00 PM – 7:00 PM</p>
-                        </div>
-                      </div>
-                      <span className="text-xs font-semibold px-2.5 py-1 bg-emerald-500/20 text-emerald-400 rounded-md border border-emerald-500/30">
-                        Confirmed
+                {/* Main Glassmorphic Chassis */}
+                <div className="relative w-full bg-slate-950/95 backdrop-blur-2xl border border-white/10 rounded-[28px] p-5 sm:p-7 shadow-[0_25px_60px_-15px_rgba(15,23,42,0.6)] text-white overflow-hidden">
+                  {/* Subtle Top Specular Lighting Highlight */}
+                  <div className="absolute top-0 inset-x-8 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+
+                  {/* Card Radial Spotlight */}
+                  <div className="absolute -top-24 -right-24 w-60 h-60 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute -bottom-24 -left-24 w-60 h-60 bg-[#a8d14a]/10 rounded-full blur-3xl pointer-events-none" />
+
+                  {/* Visual Header */}
+                  <div className="flex items-center justify-between pb-4 mb-5 border-b border-white/10 relative z-10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-rose-500/90 shadow-[0_0_8px_rgba(244,63,94,0.6)]" />
+                      <div className="w-3 h-3 rounded-full bg-amber-500/90 shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                      <div className="w-3 h-3 rounded-full bg-emerald-500/90 shadow-[0_0_8px_rgba(16,185,129,0.6)]" />
+                      <span className="ml-2 text-[11px] font-mono font-medium text-slate-400 hidden sm:inline">
+                        pressio-os // v2.4
                       </span>
                     </div>
 
-                    <div className="bg-slate-800/50 p-3.5 rounded-xl border border-slate-700/60 space-y-2">
-                      <p className="text-xs font-semibold text-slate-400">Selected Preferences:</p>
-                      <div className="flex flex-wrap gap-2 text-xs">
-                        <span className="px-2.5 py-1 bg-slate-700/80 text-slate-200 rounded-lg">
-                          🌿 Eco Lavender Soap
+                    <div className="flex items-center gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] font-bold text-emerald-400 uppercase tracking-wider">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                         </span>
-                        <span className="px-2.5 py-1 bg-slate-700/80 text-slate-200 rounded-lg">
-                          👔 Steam Press
-                        </span>
-                        <span className="px-2.5 py-1 bg-slate-700/80 text-slate-200 rounded-lg">
-                          📦 Folded &amp; Packaged
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="p-3 bg-[#a8d14a]/10 border border-[#a8d14a]/30 rounded-xl flex items-center gap-3 text-xs text-[#a8d14a]">
-                      <Clock className="w-4 h-4 shrink-0" />
-                      <span>Est. Pick Up Time: <b>25 Minutes from now</b></span>
+                        Live Workflow
+                      </span>
                     </div>
                   </div>
-                )}
 
-                {activeStep.mockType === "tracking" && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="flex items-center gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
-                      <div className="w-11 h-11 rounded-full bg-[#375a79] flex items-center justify-center text-white font-bold text-base shrink-0">
-                        RK
+                  {/* Dynamic Content Mockup Based on Active Step */}
+                  {activeStep.mockType === "booking" && (
+                    <div className="space-y-4 animate-in fade-in duration-300 relative z-10">
+                      {/* Top Header Card */}
+                      <div className="flex items-center justify-between bg-white/[0.04] p-4 rounded-2xl border border-white/10 shadow-inner">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2.5 bg-gradient-to-br from-[#375a79] to-[#253f56] text-[#a8d14a] rounded-xl shadow-md shadow-[#375a79]/40 border border-[#a8d14a]/20">
+                            <CalendarCheck className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <p className="text-xs font-mono text-slate-400">Order #PR-8924</p>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#375a79]/40 text-sky-200 font-semibold border border-sky-400/20">
+                                Express Wash
+                              </span>
+                            </div>
+                            <p className="text-sm font-bold text-white mt-0.5">Today, 5:00 PM – 7:00 PM</p>
+                          </div>
+                        </div>
+                        <span className="text-[11px] font-bold px-2.5 py-1 bg-emerald-500/15 text-emerald-300 rounded-lg border border-emerald-500/30 shadow-[0_0_12px_rgba(16,185,129,0.15)] flex items-center gap-1">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          Confirmed
+                        </span>
                       </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between">
-                          <p className="text-sm font-bold text-white">Rahat K. (Valet)</p>
-                          <span className="flex items-center text-xs text-amber-400 font-bold gap-1">
-                            <Star className="w-3.5 h-3.5 fill-amber-400" /> 4.9
+
+                      {/* Care Preferences */}
+                      <div className="bg-white/[0.03] p-4 rounded-2xl border border-white/[0.08] space-y-2.5">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="font-semibold text-slate-300 flex items-center gap-1.5">
+                            <Sparkle className="w-3.5 h-3.5 text-[#a8d14a]" /> Selected Care Profile:
+                          </span>
+                          <span className="text-[10px] text-slate-400 font-mono">Custom Spec</span>
+                        </div>
+                        <div className="flex flex-wrap gap-2 text-xs">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/90 text-slate-200 rounded-xl border border-white/10 shadow-sm">
+                            <Leaf className="w-3.5 h-3.5 text-[#a8d14a]" /> Eco Lavender Soap
+                          </span>
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/90 text-slate-200 rounded-xl border border-white/10 shadow-sm">
+                            <Shirt className="w-3.5 h-3.5 text-sky-300" /> Steam Press Finish
+                          </span>
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/90 text-slate-200 rounded-xl border border-white/10 shadow-sm">
+                            <ShoppingBag className="w-3.5 h-3.5 text-amber-300" /> Sealed Reusable Hamper
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400 flex items-center gap-1 mt-0.5">
-                          <Truck className="w-3.5 h-3.5 text-[#a8d14a]" /> On route with Eco Hamper
-                        </p>
                       </div>
-                    </div>
 
-                    <div className="bg-slate-800/50 p-3.5 rounded-xl border border-slate-700/60 space-y-2">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-slate-400">Live GPS Location:</span>
-                        <span className="text-[#a8d14a] font-mono font-semibold">0.8 km away</span>
-                      </div>
-                      <div className="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
-                        <div className="bg-[#a8d14a] h-full rounded-full w-3/4 animate-pulse" />
-                      </div>
-                    </div>
-
-                    <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-between text-xs text-emerald-400">
-                      <span className="flex items-center gap-2">
-                        <BadgeCheck className="w-4 h-4" /> Weighing &amp; Tagging
-                      </span>
-                      <span className="font-mono font-bold">100% Bagged</span>
-                    </div>
-                  </div>
-                )}
-
-                {activeStep.mockType === "wash" && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700 text-center">
-                        <p className="text-[11px] text-slate-400 uppercase font-medium">Wash Temp</p>
-                        <p className="text-lg font-bold text-[#a8d14a] mt-1">30°C Eco Cold</p>
-                      </div>
-                      <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700 text-center">
-                        <p className="text-[11px] text-slate-400 uppercase font-medium">Detergent</p>
-                        <p className="text-lg font-bold text-cyan-400 mt-1">100% Organic</p>
-                      </div>
-                    </div>
-
-                    <div className="bg-slate-800/50 p-3.5 rounded-xl border border-slate-700/60 space-y-2.5">
-                      <div className="flex items-center justify-between text-xs text-slate-300">
-                        <span className="flex items-center gap-1.5">
-                          <SparklesIcon className="w-3.5 h-3.5 text-[#a8d14a]" /> Pre-stain Treatment
+                      {/* ETA Countdown status bar */}
+                      <div className="p-3.5 bg-gradient-to-r from-[#a8d14a]/15 via-[#a8d14a]/10 to-[#375a79]/20 border border-[#a8d14a]/30 rounded-2xl flex items-center justify-between text-xs text-white">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-7 h-7 rounded-lg bg-[#a8d14a]/20 flex items-center justify-center text-[#a8d14a]">
+                            <Clock className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <span className="text-[10px] text-slate-300 uppercase block font-semibold">Valet Pickup Window</span>
+                            <span className="text-xs font-bold text-[#a8d14a]">Arriving in ~25 Minutes</span>
+                          </div>
+                        </div>
+                        <span className="px-2 py-0.5 rounded-full bg-[#a8d14a] text-slate-950 font-extrabold text-[10px]">
+                          ON SCHEDULE
                         </span>
-                        <Check className="w-4 h-4 text-emerald-400" />
                       </div>
-                      <div className="flex items-center justify-between text-xs text-slate-300">
-                        <span className="flex items-center gap-1.5">
-                          <Leaf className="w-3.5 h-3.5 text-[#a8d14a]" /> Allergen Free Rinse
+                    </div>
+                  )}
+
+                  {activeStep.mockType === "tracking" && (
+                    <div className="space-y-4 animate-in fade-in duration-300 relative z-10">
+                      {/* Valet Driver Profile */}
+                      <div className="flex items-center gap-3.5 bg-white/[0.04] p-4 rounded-2xl border border-white/10">
+                        <div className="relative">
+                          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#375a79] to-sky-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg border border-white/20">
+                            RK
+                          </div>
+                          <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-500 rounded-full border-2 border-slate-950" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between">
+                            <p className="text-sm font-bold text-white truncate">Rahat Karim</p>
+                            <span className="flex items-center text-xs text-amber-400 font-bold gap-1 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">
+                              <Star className="w-3.5 h-3.5 fill-amber-400" /> 4.98
+                            </span>
+                          </div>
+                          <p className="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
+                            <ShieldCheck className="w-3.5 h-3.5 text-[#a8d14a]" /> Verified Senior Valet &bull; 640+ Trips
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Live GPS Track Visualization */}
+                      <div className="bg-white/[0.03] p-4 rounded-2xl border border-white/[0.08] space-y-3">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-slate-300 font-medium flex items-center gap-1.5">
+                            <Truck className="w-4 h-4 text-[#a8d14a]" /> Live Transit Tracking
+                          </span>
+                          <span className="text-[#a8d14a] font-mono font-bold text-xs bg-[#a8d14a]/10 px-2 py-0.5 rounded-md border border-[#a8d14a]/20">
+                            0.8 km away &bull; 6m ETA
+                          </span>
+                        </div>
+
+                        {/* Interactive Route Track */}
+                        <div className="relative pt-2 pb-1">
+                          <div className="w-full bg-slate-800 rounded-full h-2 relative overflow-hidden">
+                            <div className="bg-gradient-to-r from-[#375a79] via-sky-400 to-[#a8d14a] h-full rounded-full w-4/5 animate-pulse" />
+                          </div>
+                          <div className="flex justify-between items-center text-[10px] text-slate-400 mt-2 font-mono">
+                            <span>Hub Depot</span>
+                            <span className="text-[#a8d14a] font-semibold flex items-center gap-1">
+                              <MapPin className="w-3 h-3" /> Your Doorstep
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Digital Weigh & Tag Banner */}
+                      <div className="p-3.5 bg-emerald-500/10 border border-emerald-500/25 rounded-2xl flex items-center justify-between text-xs text-emerald-300">
+                        <span className="flex items-center gap-2 font-medium">
+                          <BadgeCheck className="w-4 h-4 text-emerald-400" /> Smart Tagged &amp; Weighed
                         </span>
-                        <Check className="w-4 h-4 text-emerald-400" />
-                      </div>
-                      <div className="flex items-center justify-between text-xs text-slate-300">
-                        <span className="flex items-center gap-1.5">
-                          <Shirt className="w-3.5 h-3.5 text-[#a8d14a]" /> Professional Steam Iron
+                        <span className="font-mono font-bold text-white bg-emerald-500/20 px-2 py-0.5 rounded border border-emerald-500/30">
+                          4.6 kg Verified
                         </span>
-                        <Check className="w-4 h-4 text-emerald-400" />
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {activeStep.mockType === "delivery" && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 flex items-center justify-between">
-                      <div>
-                        <p className="text-xs text-slate-400">Garment Protection</p>
-                        <p className="text-sm font-bold text-white">Dust-Proof Eco Cover</p>
+                  {activeStep.mockType === "wash" && (
+                    <div className="space-y-4 animate-in fade-in duration-300 relative z-10">
+                      {/* Telemetry Sensor Gauges */}
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="bg-white/[0.04] p-3.5 rounded-2xl border border-white/10 text-center relative overflow-hidden">
+                          <div className="absolute top-0 inset-x-4 h-0.5 bg-gradient-to-r from-transparent via-[#a8d14a] to-transparent opacity-60" />
+                          <p className="text-[11px] text-slate-400 uppercase font-mono tracking-wider">Water Temp</p>
+                          <p className="text-xl font-black text-[#a8d14a] mt-1 tracking-tight">30°C Cold</p>
+                          <span className="text-[10px] text-slate-400 block mt-0.5">Zero Fiber Stress</span>
+                        </div>
+                        <div className="bg-white/[0.04] p-3.5 rounded-2xl border border-white/10 text-center relative overflow-hidden">
+                          <div className="absolute top-0 inset-x-4 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60" />
+                          <p className="text-[11px] text-slate-400 uppercase font-mono tracking-wider">Detergent Formula</p>
+                          <p className="text-xl font-black text-cyan-300 mt-1 tracking-tight">100% Bio</p>
+                          <span className="text-[10px] text-slate-400 block mt-0.5">Organic &amp; Hypoallergenic</span>
+                        </div>
                       </div>
-                      <span className="px-2.5 py-1 bg-[#a8d14a]/20 text-[#a8d14a] rounded-lg text-xs font-bold">
-                        Ready
-                      </span>
-                    </div>
 
-                    <div className="bg-slate-800/50 p-3.5 rounded-xl border border-slate-700/60 space-y-2 text-xs">
-                      <div className="flex justify-between text-slate-300">
-                        <span>Folded Shirts / Tops:</span>
-                        <span className="font-bold text-white">6 Items</span>
+                      {/* Multi-Stage Wash Progress */}
+                      <div className="bg-white/[0.03] p-4 rounded-2xl border border-white/[0.08] space-y-3">
+                        <div className="flex items-center justify-between text-xs pb-1 border-b border-white/5">
+                          <span className="text-slate-300 font-medium">Care Process Checklist</span>
+                          <span className="text-[10px] font-mono text-emerald-400 font-semibold">2 of 3 Completed</span>
+                        </div>
+                        <div className="space-y-2 text-xs">
+                          <div className="flex items-center justify-between text-slate-200">
+                            <span className="flex items-center gap-2">
+                              <SparklesIcon className="w-3.5 h-3.5 text-[#a8d14a]" /> Pre-stain Inspection &amp; Spotting
+                            </span>
+                            <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">
+                              Done
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between text-white font-medium">
+                            <span className="flex items-center gap-2">
+                              <Leaf className="w-3.5 h-3.5 text-cyan-300" /> Hydro-Sonic Gentle Wash (850 RPM)
+                            </span>
+                            <span className="text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/30 animate-pulse">
+                              Active
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between text-slate-400">
+                            <span className="flex items-center gap-2">
+                              <Shirt className="w-3.5 h-3.5 text-slate-500" /> Sanitizing Steam Finishing (99.9%)
+                            </span>
+                            <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-semibold border border-white/5">
+                              Queued
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex justify-between text-slate-300">
-                        <span>Hung Suits &amp; Dresses:</span>
-                        <span className="font-bold text-white">4 Items</span>
-                      </div>
-                      <div className="flex justify-between text-slate-300">
-                        <span>Quality Guarantee:</span>
-                        <span className="font-bold text-[#a8d14a]">Passed 100%</span>
-                      </div>
-                    </div>
 
-                    <div className="p-3 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-between text-xs text-cyan-300">
-                      <span className="flex items-center gap-2">
-                        <ShoppingBag className="w-4 h-4" /> Delivered to your Doorstep
-                      </span>
-                      <span className="font-mono font-bold">24-Hour Express</span>
+                      {/* Eco Impact Footer */}
+                      <div className="p-3 bg-cyan-500/10 border border-cyan-500/20 rounded-2xl flex items-center justify-between text-xs text-cyan-300">
+                        <span className="flex items-center gap-2">
+                          <Zap className="w-4 h-4 text-cyan-400" /> Eco Water Conservation
+                        </span>
+                        <span className="font-mono font-bold text-white">42L Saved Today</span>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+
+                  {activeStep.mockType === "delivery" && (
+                    <div className="space-y-4 animate-in fade-in duration-300 relative z-10">
+                      {/* Quality Shield Banner */}
+                      <div className="bg-white/[0.04] p-4 rounded-2xl border border-white/10 flex items-center justify-between">
+                        <div>
+                          <div className="flex items-center gap-1.5 text-[#a8d14a] text-xs font-bold mb-0.5">
+                            <ShieldCheck className="w-4 h-4" /> 100% Quality Inspected
+                          </div>
+                          <p className="text-sm font-bold text-white">Dust-Proof Eco Packaging</p>
+                        </div>
+                        <span className="px-3 py-1 bg-[#a8d14a]/20 text-[#a8d14a] rounded-xl text-xs font-black border border-[#a8d14a]/30 shadow-[0_0_12px_rgba(168,209,74,0.2)]">
+                          GRADE A+
+                        </span>
+                      </div>
+
+                      {/* Garment Breakdown */}
+                      <div className="bg-white/[0.03] p-4 rounded-2xl border border-white/[0.08] space-y-2.5 text-xs">
+                        <div className="flex justify-between items-center text-slate-300 pb-2 border-b border-white/5">
+                          <span>Folded Garments:</span>
+                          <span className="font-mono font-bold text-white bg-slate-800 px-2 py-0.5 rounded">6 Shirts / Tees</span>
+                        </div>
+                        <div className="flex justify-between items-center text-slate-300 pb-2 border-b border-white/5">
+                          <span>Hung on Wooden Hangers:</span>
+                          <span className="font-mono font-bold text-white bg-slate-800 px-2 py-0.5 rounded">3 Suits / Blazers</span>
+                        </div>
+                        <div className="flex justify-between items-center text-slate-300">
+                          <span>Packaging:</span>
+                          <span className="font-bold text-[#a8d14a]">100% Biodegradable Cover</span>
+                        </div>
+                      </div>
+
+                      {/* Fast Express Delivery Capsule */}
+                      <div className="p-3.5 bg-gradient-to-r from-emerald-500/15 via-[#a8d14a]/10 to-sky-500/15 border border-emerald-500/30 rounded-2xl flex items-center justify-between text-xs text-emerald-300">
+                        <span className="flex items-center gap-2 font-bold text-white">
+                          <ShoppingBag className="w-4 h-4 text-emerald-400" /> Doorstep Express Handover
+                        </span>
+                        <span className="font-mono font-extrabold text-[#a8d14a] bg-slate-900/80 px-2.5 py-1 rounded-lg border border-[#a8d14a]/30">
+                          24h Guaranteed
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

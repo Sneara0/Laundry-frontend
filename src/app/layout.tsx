@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import { GsapProvider } from "@/providers/GsapProvider";
 import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
 import Navbar from "@/components/client/navbar";
+import ChatWidget from "@/components/client/ChatWidget";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -31,6 +32,7 @@ export default function RootLayout({
           <SmoothScrollProvider>
             <Navbar />
             {children}
+            <ChatWidget />
           </SmoothScrollProvider>
         </GsapProvider>
       </body>
